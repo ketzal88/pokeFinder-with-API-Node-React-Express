@@ -8,6 +8,22 @@ let nock = require("nock");
 
 chai.use(chaiHttp);
 
+describe('/', () => {
+  describe('/GET /', () => {
+    it('it returns pokemon data when requested', () => {
+      chai
+        .request(server)
+        .get('/')
+        .end((err, res) => {
+          res.should.have.status(200)
+          res.body.results.should.a('array')
+          res.body.results.length.should.be.greater(1)
+          done()
+        })
+    })
+  })
+})
+
 describe("/pokemons", () => {
   describe("/GET /search/:search", () => {
     context("when the pokemon api returns OK", () => {
