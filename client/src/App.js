@@ -76,7 +76,7 @@ export default class App extends Component {
           <CardColumns width="33%">
             {pokemons.map((pokemon, i) => (
               <Card body inverse color="danger" className="p-0">
-                <CardImg top width="25%" src={pokemon.img} alt={pokemon.name} />
+                <CardImg top width="20%" src={pokemon.img} alt={pokemon.name} />
                 <CardBody>
                   <CardTitle>
                     <p
