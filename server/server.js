@@ -30,7 +30,7 @@ function findPokemons(inputValue, allPokemons) {
 
 app.get("/search/:search", function (req, res) {
   axios
-    .get("https://pokeapi.co/api/v2/pokemon?limit=500")
+    .get("https://pokeapi.co/api/v2/pokemon?limit=525")
     .then((response) => {
       let allPokemons = response.data.results;
       let inputValue = req.params.search;
